@@ -1,0 +1,15 @@
+C:\Users\Admin\dotnet-course\TestApp\bin\Debug\net8.0\TestApp.exe
+C:\Users\Admin\dotnet-course\TestApp\bin\Debug\net8.0\TestApp.deps.json
+C:\Users\Admin\dotnet-course\TestApp\bin\Debug\net8.0\TestApp.runtimeconfig.json
+C:\Users\Admin\dotnet-course\TestApp\bin\Debug\net8.0\TestApp.dll
+C:\Users\Admin\dotnet-course\TestApp\bin\Debug\net8.0\TestApp.pdb
+C:\Users\Admin\dotnet-course\TestApp\obj\Debug\net8.0\TestApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\dotnet-course\TestApp\obj\Debug\net8.0\TestApp.AssemblyInfoInputs.cache
+C:\Users\Admin\dotnet-course\TestApp\obj\Debug\net8.0\TestApp.AssemblyInfo.cs
+C:\Users\Admin\dotnet-course\TestApp\obj\Debug\net8.0\TestApp.csproj.CoreCompileInputs.cache
+C:\Users\Admin\dotnet-course\TestApp\obj\Debug\net8.0\TestApp.sourcelink.json
+C:\Users\Admin\dotnet-course\TestApp\obj\Debug\net8.0\TestApp.dll
+C:\Users\Admin\dotnet-course\TestApp\obj\Debug\net8.0\refint\TestApp.dll
+C:\Users\Admin\dotnet-course\TestApp\obj\Debug\net8.0\TestApp.pdb
+C:\Users\Admin\dotnet-course\TestApp\obj\Debug\net8.0\TestApp.genruntimeconfig.cache
+C:\Users\Admin\dotnet-course\TestApp\obj\Debug\net8.0\ref\TestApp.dll
