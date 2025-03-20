@@ -18,9 +18,21 @@ namespace Recipe_Book_Management_System.Application.UseCases
             _bookRepository = bookRepository ?? throw new ArgumentNullException(nameof(bookRepository));
         }
 
-        public IReadOnlyList<(string Title, string Author)> Execute()
+        public IReadOnlyList<(string Title, string Author)> Execute(Func<string, bool> titleFilter = null, Func<string, bool> authorFilter = null)
         {
-            return _bookRepository.GetAll();
+            var books = _bookRepository.GetAll();
+
+            if (titleFilter != null)
+            {
+                books = books.Where(book => titleFilter(book.Title)).ToList();
+            }
+
+            if (authorFilter != null)
+            {
+                books = books.Where(book => authorFilter(book.Author)).ToList();
+            }
+
+            return books;
         }
     }
 }

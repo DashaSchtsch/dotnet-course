@@ -12,5 +12,7 @@ namespace Recipe_Book_Management_System.Infrastucture.Percistence.Interfaces
         void Add(Book book);
         Book GetByTitle(string title);
         IReadOnlyList<(string Title, string Author)> GetAll();
+        List<Book> FilteredByTitle(Func<string, bool> predicate);
+        List<Book> FilteredByAuthor(Func<string, bool> predicate);
     }
 }
