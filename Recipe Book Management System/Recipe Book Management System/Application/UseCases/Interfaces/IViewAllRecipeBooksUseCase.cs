@@ -9,6 +9,6 @@ namespace Recipe_Book_Management_System.Application.UseCases.Interfaces
 {
     interface IViewAllRecipeBooksUseCase
     {
-        IReadOnlyList<(string Title, string Author)> Execute();
+        IReadOnlyList<(string Title, string Author)> Execute(Func<string, bool> titleFilter = null, Func<string, bool> authorFilter = null);
     }
 }

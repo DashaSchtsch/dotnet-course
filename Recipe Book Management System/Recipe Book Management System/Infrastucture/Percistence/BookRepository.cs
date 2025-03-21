@@ -30,5 +30,13 @@ namespace Recipe_Book_Management_System.Infrastucture.Percistence
         {
             return _books.Select(b => (b.Title, b.Author)).ToList().AsReadOnly();
         }
+        public List<Book> FilteredByTitle(Func<string, bool> predicate)
+        {
+            return _books.Where(b => predicate(b.Title)).ToList();
+        }
+        public List<Book> FilteredByAuthor(Func<string, bool> predicate)
+        {
+            return _books.Where(b => predicate(b.Author)).ToList();
+        }
     }
 }
