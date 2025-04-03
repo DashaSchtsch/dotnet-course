@@ -1,0 +1,104 @@
+1. Two Sum (easy)
+
+public class Solution {
+    public int[] TwoSum(int[] nums, int target) {
+        for (int i = 0; i < nums.Length; ++i) {
+            int diff = target - nums[i];
+            for (int j = i + 1; j < nums.Length; ++j) {
+                if (nums[j] == diff) {
+                    return new int[] { i, j }; 
+                }
+            }
+        }
+        return null;
+    }
+}
+
+===============
+
+2. Longest Common Prefix (easy)
+
+public class Solution {
+    public string LongestCommonPrefix(string[] strs) {
+        if (strs == null || strs.Length == 0) {
+            return "";
+        }
+
+        string prefix = strs[0];
+
+        foreach (string str in strs.Skip(1))
+        {
+            while (!str.StartsWith(prefix))
+            {
+                prefix = prefix.Substring(0, prefix.Length - 1);
+                if (prefix == "") {
+                    return "";
+                }
+            }
+        }
+
+        return prefix;
+    }
+}
+
+===============
+
+3. Palindrome Number (easy)
+
+public class Solution {
+    public bool IsPalindrome(int x) {
+        string strX = x.ToString();
+        char[] charX = strX.ToCharArray();
+        Array.Reverse(charX);
+        string rstrX = new string(charX);
+        if(strX == rstrX){
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
+}
+
+===============
+
+4. Add Two Numbers (medium)
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     public ListNode(int val=0, ListNode next=null) {
+ *         this.val = val;
+ *         this.next = next;
+ *     }
+ * }
+ */
+public class Solution {
+    public ListNode AddTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode listHead = new ListNode(0);
+        ListNode current = listHead;
+        int per = 0;
+
+        while (l1 != null || l2 != null || per > 0) {
+            int sum = per;
+
+            if (l1 != null) {
+                sum += l1.val;
+                l1 = l1.next;
+            }
+            if (l2 != null) {
+                sum += l2.val;
+                l2 = l2.next;
+            }
+
+            per = sum / 10;
+            current.next = new ListNode(sum % 10);
+            current = current.next;
+        }
+
+        return listHead.next;
+    }
+}
