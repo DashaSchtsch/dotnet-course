@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Recipe_Book_Management_System.Application.UseCases.Interfaces
+namespace Recipe_Book_Management_System.Application.Services.Interfaces
 {
-    interface IViewAllRecipeBooksUseCase
+    internal interface IUserService
     {
-        IReadOnlyList<(string Title, string Author)> Execute();
+        bool RegisterUser(string name);
     }
 }

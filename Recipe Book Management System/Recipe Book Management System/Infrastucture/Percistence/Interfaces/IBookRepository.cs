@@ -1,16 +1,14 @@
-﻿using Recipe_Book_Management_System.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Recipe_Book_Management_System.Application.DTOs;
+using Recipe_Book_Management_System.Domain.Entities;
 
 namespace Recipe_Book_Management_System.Infrastucture.Percistence.Interfaces
 {
     interface IBookRepository
     {
-        void Add(Book book);
+        Book AddBook(string title, string author, string description);
+        void AddRecipeToBook(Book book, Recipe recipe);
         Book GetByTitle(string title);
-        IReadOnlyList<(string Title, string Author)> GetAll();
+        List<Book> GetAll();
+        List<Book> Filter(Func<Book, bool> predicate);
     }
 }

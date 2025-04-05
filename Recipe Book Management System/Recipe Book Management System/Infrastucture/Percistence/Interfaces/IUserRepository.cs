@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace Recipe_Book_Management_System.Infrastucture.Percistence.Interfaces
 {
-    interface IRecipeRepository
+    interface IUserRepository
     {
-        Recipe AddRecipe(string title, string ingredients, string instructions);
-        Recipe GetByTitle(string title);
-        List<Recipe> GetAll();
-        List<Recipe> Filter(Func<Recipe, bool> predicate);
+        User AddUser(string name);
+        User GetById(int userId);
+        List<User> Filter(Func<User, bool> predicate);
     }
 }
