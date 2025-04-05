@@ -9,6 +9,8 @@ namespace Recipe_Book_Management_System.Infrastucture.Percistence.Interfaces
 {
     interface IUserRepository
     {
+        User AddUser(string name);
         User GetById(int userId);
+        List<User> Filter(Func<User, bool> predicate);
     }
 }
